@@ -1,19 +1,52 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'JICXFH,ZBCYPB'}
+  - layout_properties: {full_width_row: true, grid_position: 'JICXFH,ZBCYPB'}
     name: label_1
-    properties: {align: center, text: Squaring App}
+    properties: {align: center, role: headline, text: Squaring App}
     type: Label
-  - layout_properties: {grid_position: 'BXODOA,ACYGJE'}
+  - layout_properties: {full_width_row: true, grid_position: 'NPCJTY,BBRXIA'}
     name: rootLabel
-    properties: {text: Root Number}
+    properties: {align: right, bold: false, role: null, text: Root Number}
     type: Label
   - data_bindings:
     - {code: '', property: placeholder, writeback: false}
-    layout_properties: {grid_position: 'BXODOA,UZMIEY'}
+    layout_properties: {full_width_row: true, grid_position: 'NPCJTY,GUKOPK'}
     name: rootNumber
-    properties: {}
+    properties: {role: outlined}
     type: TextBox
+  - layout_properties: {full_width_row: true, grid_position: 'CDSAUP,HRTGYT'}
+    name: SquaredLabel
+    properties: {align: right, role: body, text: Squared Number}
+    type: Label
+  - layout_properties: {full_width_row: true, grid_position: 'CDSAUP,UTSKWX'}
+    name: squaredNumber
+    properties: {border: 1px solid black, role: body}
+    type: Label
+  - layout_properties: {full_width_row: true, grid_position: 'ICAHVT,JSNLIY'}
+    name: binomialExpression
+    properties: {align: center}
+    type: RichText
+  - layout_properties: {full_width_row: true, grid_position: 'JPEXVN,JOEWGN'}
+    name: expandedExpression
+    properties: {align: center, border: 1px solid black}
+    type: RichText
+  - layout_properties: {full_width_row: true, grid_position: 'LFNSYR,FDPQDR'}
+    name: expandedExpression1
+    properties: {align: center, border: 1px solid black}
+    type: RichText
+  - layout_properties: {full_width_row: true, grid_position: 'PKOPXY,ULVDUY'}
+    name: expandedExpression2
+    properties: {align: center, border: 1px solid black}
+    type: RichText
+  - layout_properties: {full_width_row: true, grid_position: 'QTRHLA,UZBJUC'}
+    name: columnAdditionExpression
+    properties: {align: center, border: 1px solid black}
+    type: RichText
+  - event_bindings: {click: square_btn_click}
+    layout_properties: {grid_position: 'GSFUEL,XDOASA'}
+    name: square_btn
+    properties: {background: '', border: '', icon_align: left, role: elevated-button, text: Square}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
