@@ -5,12 +5,15 @@ components:
     properties: {align: center, role: headline, text: Squaring App}
     type: Label
   - components:
-    - layout_properties: {grid_position: 'SLINMQ,TTVERS'}
+    - data_bindings:
+      - {code: '"custom-width"', property: role, writeback: false}
+      layout_properties: {grid_position: 'SLINMQ,TTVERS'}
       name: rootLabel
       properties: {align: right, bold: false, role: null, text: Root Number}
       type: Label
     - data_bindings:
       - {code: '', property: placeholder, writeback: false}
+      - {code: '"custom-width"', property: role, writeback: false}
       layout_properties: {grid_position: 'SLINMQ,TEJHTN'}
       name: rootNumber
       properties: {role: outlined}
@@ -20,15 +23,19 @@ components:
     properties: {role: outlined-card}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'RRJLAV,AXXUSN'}
+    - data_bindings:
+      - {code: '"custom-width"', property: role, writeback: false}
+      layout_properties: {grid_position: 'RRJLAV,AXXUSN'}
       name: SquaredLabel
       properties: {align: right, role: body, text: Squared Number}
       type: Label
-    - layout_properties: {grid_position: 'RRJLAV,TTXMNW'}
+    - data_bindings:
+      - {code: '"custom-width"', property: role, writeback: false}
+      layout_properties: {grid_position: 'RRJLAV,TTXMNW'}
       name: squaredNumber
       properties: {border: 1px solid black, role: body}
       type: Label
-    layout_properties: {grid_position: 'RQWTTX,NLDMYW'}
+    layout_properties: {grid_position: 'ZZCHQL,YUTESA'}
     name: outlined_card_2
     properties: {role: outlined-card}
     type: ColumnPanel
