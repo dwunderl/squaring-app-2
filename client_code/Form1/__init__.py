@@ -24,3 +24,4 @@ class Form1(Form1Template):
     self.expandedExpression1.content = squaringDict['expandedExpression1']
     self.expandedExpression2.content = squaringDict['expandedExpression2']
     self.columnAdditionExpression.content = squaringDict['columnAdditionExpression']
+    self.columnAdditionExpression2.content = squaringDict['columnAdditionExpression']

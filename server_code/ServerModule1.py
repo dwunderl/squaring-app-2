@@ -42,6 +42,7 @@ class SquaringStuff:
                                   middleSign + str(firstDoubledCoeff) + " * " + str(abs(fiftyDelta)) + " (00) + " + 
                                   str(lastSquared))
       self.columnAdditionExpression = str(int(firstSquared*100)) + "\n" + str(middleTerm*100) + "\n" + str(lastSquared)
+      self.columnAdditionExpression2 = str(int(firstSquared*100)) + "\n" + str(middleTerm*100) + "\n" + str(lastSquared)
 
     def get_attributes(self):
         return {'rootNumber': self.rootNumber, 
