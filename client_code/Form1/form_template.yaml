@@ -28,7 +28,7 @@ components:
       - {code: '"custom-width"', property: role, writeback: false}
       layout_properties: {expand: false, width: 100}
       name: squaredNumber
-      properties: {border: 1px solid black, role: body}
+      properties: {background: light gray, border: 1px solid black, role: body}
       type: Label
     layout_properties: {grid_position: 'JHFBAW,BAZJGR'}
     name: flow_panel_1
