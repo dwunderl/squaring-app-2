@@ -16,7 +16,7 @@ components:
       - {code: '', property: role, writeback: false}
       layout_properties: {grid_position: 'QTWHIM,ALIQGS'}
       name: rootNumber
-      properties: {role: outlined}
+      properties: {align: center, role: outlined}
       type: TextBox
     - event_bindings: {click: square_btn_click}
       layout_properties: {grid_position: 'QTWHIM,DLFLTU'}
@@ -63,7 +63,7 @@ components:
         margin: [null, '50', null, '50']
       wrap_on: never
     type: ColumnPanel
-  - layout_properties: {full_width_row: true, grid_position: 'ICAHVT,JSNLIY'}
+  - layout_properties: {full_width_row: false, grid_position: 'ICAHVT,JSNLIY'}
     name: binomialExpression
     properties:
       align: center
@@ -71,7 +71,7 @@ components:
       spacing:
         margin: [null, '50', null, '50']
     type: RichText
-  - layout_properties: {full_width_row: true, grid_position: 'LFNSYR,FDPQDR'}
+  - layout_properties: {full_width_row: false, grid_position: 'LFNSYR,FDPQDR'}
     name: expandedExpression1
     properties:
       align: center
@@ -79,7 +79,7 @@ components:
       spacing:
         margin: [null, '50', null, '50']
     type: RichText
-  - layout_properties: {full_width_row: true, grid_position: 'PKOPXY,ULVDUY'}
+  - layout_properties: {full_width_row: false, grid_position: 'PKOPXY,ULVDUY'}
     name: expandedExpression2
     properties:
       align: center
@@ -87,22 +87,30 @@ components:
       spacing:
         margin: [null, '50', null, '50']
     type: RichText
-  - layout_properties: {full_width_row: true, grid_position: 'QTRHLA,UZBJUC'}
-    name: columnAdditionExpression
+  - components:
+    - layout_properties: {grid_position: 'FKKEPA,UCWYAT'}
+      name: columnAdditionExpression
+      properties:
+        align: right
+        border: 1px solid black
+        spacing:
+          margin: [null, '0', null, '0']
+      type: RichText
+    - layout_properties: {grid_position: 'FKKEPA,VVTGMF'}
+      name: columnAdditionExpression2
+      properties:
+        align: right
+        border: 1px solid black
+        spacing:
+          margin: [null, '0', null, '0']
+      type: RichText
+    layout_properties: {grid_position: 'NMTAII,EPYORS'}
+    name: column_panel_1
     properties:
-      align: right
-      border: 1px solid black
       spacing:
         margin: [null, '50', null, '50']
-    type: RichText
-  - layout_properties: {grid_position: 'QTRHLA,SQEYTH'}
-    name: columnAdditionExpression2
-    properties:
-      align: right
-      border: 1px solid black
-      spacing:
-        margin: [null, '50', null, '50']
-    type: RichText
+      wrap_on: never
+    type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
   properties:

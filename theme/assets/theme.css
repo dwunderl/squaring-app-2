@@ -546,7 +546,3 @@ body>div[data-notify="container"]>span[data-notify="title"] {
   font-weight: 500;
   color: %color:On Surface%;
 
-.custom-width {
-    width: 25%; /* Set your desired width */
-    max-width: 100%; /* Optional: Limit width to container */
-}
