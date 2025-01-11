@@ -7,61 +7,108 @@ components:
   - components:
     - data_bindings:
       - {code: '"custom-width"', property: role, writeback: false}
-      layout_properties: {}
+      layout_properties: {grid_position: 'QTWHIM,GZEHEQ'}
       name: rootLabel
       properties: {align: right, bold: false, role: null, text: Root}
       type: Label
     - data_bindings:
       - {code: '', property: placeholder, writeback: false}
       - {code: '', property: role, writeback: false}
-      layout_properties: {expand: false, width: 75}
+      layout_properties: {grid_position: 'QTWHIM,ALIQGS'}
       name: rootNumber
       properties: {role: outlined}
       type: TextBox
+    - event_bindings: {click: square_btn_click}
+      layout_properties: {grid_position: 'QTWHIM,DLFLTU'}
+      name: square_btn
+      properties:
+        background: ''
+        border: ''
+        icon_align: left
+        role: elevated-button
+        spacing:
+          margin: [null, '0', null, '0']
+          padding: [null, '0', null, '0']
+        text: Square
+      type: Button
     - data_bindings:
-      - {code: '"custom-width"', property: role, writeback: false}
-      layout_properties: {}
+      - {code: '', property: role, writeback: false}
+      layout_properties: {grid_position: 'QTWHIM,DKWJOU'}
       name: SquaredLabel
-      properties: {align: right, role: body, text: Square}
+      properties:
+        align: right
+        role: body
+        spacing:
+          padding: ['8', null, '8', null]
+        text: Square
       type: Label
     - data_bindings:
       - {code: '"custom-width"', property: role, writeback: false}
-      layout_properties: {expand: false, width: 100}
+      layout_properties: {grid_position: 'QTWHIM,DICNRZ'}
       name: squaredNumber
-      properties: {background: light gray, border: 1px solid black, role: body}
+      properties:
+        align: center
+        background: light gray
+        border: 1px solid black
+        icon_align: left
+        role: body
+        spacing:
+          padding: ['8', null, '8', null]
       type: Label
-    layout_properties: {grid_position: 'JHFBAW,BAZJGR'}
-    name: flow_panel_1
-    properties: {}
-    type: FlowPanel
+    layout_properties: {grid_position: 'SVFBAD,OJOGNC'}
+    name: column_panel_2
+    properties:
+      col_spacing: tiny
+      spacing:
+        margin: [null, '50', null, '50']
+      wrap_on: never
+    type: ColumnPanel
   - layout_properties: {full_width_row: true, grid_position: 'ICAHVT,JSNLIY'}
     name: binomialExpression
-    properties: {align: center, border: 1px solid black}
+    properties:
+      align: center
+      border: 1px solid black
+      spacing:
+        margin: [null, '50', null, '50']
     type: RichText
   - layout_properties: {full_width_row: true, grid_position: 'LFNSYR,FDPQDR'}
     name: expandedExpression1
-    properties: {align: center, border: 1px solid black}
+    properties:
+      align: center
+      border: 1px solid black
+      spacing:
+        margin: [null, '50', null, '50']
     type: RichText
   - layout_properties: {full_width_row: true, grid_position: 'PKOPXY,ULVDUY'}
     name: expandedExpression2
-    properties: {align: center, border: 1px solid black}
+    properties:
+      align: center
+      border: 1px solid black
+      spacing:
+        margin: [null, '50', null, '50']
     type: RichText
   - layout_properties: {full_width_row: true, grid_position: 'QTRHLA,UZBJUC'}
     name: columnAdditionExpression
-    properties: {align: right, border: 1px solid black}
+    properties:
+      align: right
+      border: 1px solid black
+      spacing:
+        margin: [null, '50', null, '50']
     type: RichText
   - layout_properties: {grid_position: 'QTRHLA,SQEYTH'}
     name: columnAdditionExpression2
-    properties: {align: right, border: 1px solid black}
+    properties:
+      align: right
+      border: 1px solid black
+      spacing:
+        margin: [null, '50', null, '50']
     type: RichText
-  - event_bindings: {click: square_btn_click}
-    layout_properties: {grid_position: 'GSFUEL,XDOASA'}
-    name: square_btn
-    properties: {background: '', border: '', icon_align: left, role: elevated-button, text: Square}
-    type: Button
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties:
+    col_widths: '{}'
+    spacing:
+      margin: [null, null, null, '0']
   type: ColumnPanel
 - layout_properties: {slot: nav-right}
   name: navbar_links

@@ -32,6 +32,9 @@ class SquaringStuff:
       firstCoeff = fiftyBoundary/100.0
       firstDoubledCoeff = int((fiftyBoundary/100.0)*2)
       middleTerm = firstDoubledCoeff * fiftyDelta
+      middleTermRemainder = middleTerm % 10
+      if middleTerm < 0:
+        middleTermRoundedUp = middleTerm - middleTermRemainder
       lastSquared = fiftyDelta**2
       
       self.binomialExpression = "( " + str(fiftyBoundary) + middleSign + str(abs(fiftyDelta)) + " )^2^"
@@ -42,7 +45,9 @@ class SquaringStuff:
                                   middleSign + str(firstDoubledCoeff) + " * " + str(abs(fiftyDelta)) + " (00) + " + 
                                   str(lastSquared))
       self.columnAdditionExpression = str(int(firstSquared*100)) + "\n" + str(middleTerm*100) + "\n" + str(lastSquared)
-      self.columnAdditionExpression2 = str(int(firstSquared*100)) + "\n" + str(middleTerm*100) + "\n" + str(lastSquared)
+      self.columnAdditionExpression2 = ""
+      if middleTerm < 0:
+        self.columnAdditionExpression2 = str(int(firstSquared*100)) + "\n" + str(middleTermRoundedUp*100) + "\n" + str(middleTermRemainder*100) + "\n" + str(lastSquared)
 
     def get_attributes(self):
         return {'rootNumber': self.rootNumber, 
@@ -50,7 +55,8 @@ class SquaringStuff:
                 'binomialExpression': self.binomialExpression,
                 'expandedExpression1': self.expandedExpression1,
                 'expandedExpression2': self.expandedExpression2,
-                'columnAdditionExpression': self.columnAdditionExpression}
+                'columnAdditionExpression': self.columnAdditionExpression,
+                'columnAdditionExpression2': self.columnAdditionExpression2}
 
 
 @anvil.server.callable
