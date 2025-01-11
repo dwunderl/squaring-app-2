@@ -1,7 +1,7 @@
 from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
-
+import random
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -16,7 +16,19 @@ class Form1(Form1Template):
     result = server.call('squareProcess',int(self.rootNumber.text))
     self.populateSquaringUI(result)
     pass
+    
 
+  def GenRandomRoot_Btn_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    # print("Entered genrand button click")
+    lowRandBound = 1
+    highRandBound = 999
+    randomInteger = random.randint(lowRandBound, highRandBound)
+    # print("Random number " + str(randomInteger))
+
+    self.rootNumber.text = str(randomInteger)
+    pass
+    
   def populateSquaringUI(self, squaringDict):
     self.squaredNumber.text = str(squaringDict['squaredNumber'])
     
